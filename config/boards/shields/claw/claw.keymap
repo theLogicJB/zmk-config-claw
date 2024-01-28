@@ -6,7 +6,7 @@
 // Home row mods macro
 #define HRMR(k1, k2, k3, k4) &mt RSHIFT k1  &mt RCTRL k2  &mt RALT k3 &mt RGUI k4
 
-#define LNX 0
+#define MAC 0
 #define RIG 1
 #define LEF 2
 #define TRI 3
@@ -80,7 +80,7 @@
 				      &ht LGUI A       &ht LALT S      &ht LCTRL D      &ht LSHIFT F       &kp G                &kp H          &ht RSHIFT J     &ht RCTRL K       &ht RALT L     &ht RGUI SEMI
 				//├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
 				//│        Z       │        X       │        C       │        V       │        B       │   │        N       │        M       │       , <      │       . >      │       /        │
-				       &kp Z            &kp X            &kp C            &kp V            &kp B                &kp N            &kp M            &kp COMMA         &kp DOT         &kp FSLH
+				       &kp Z            &kp X            &td_c             &td_v             &kp B                &kp N            &kp M            &kp COMMA         &kp DOT         &kp FSLH
 				//╰────────────────┴────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴────────────────╯
 								       &lt LEF ESC        &kp SPACE         &kp TAB            &kp ENTER         &kp BSPC        &lt RIG DEL
 				//             			    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯

@@ -99,7 +99,7 @@
 				//│                │                │                │                │     INSERT     │   │      HOME      │                │                │       END      │     PAGE DN    │
 				       &none             &none            &none            &none            &kp INS             &kp HOME          &none            &none           &kp END          &kp PG_DN
 				//╰────────────────┴────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴────────────────╯
-								       &lt LEF ESC        &kp SPACE         &kp TAB            &kp ENTER         &kp BSPC        &lt RIG DEL
+								       &lt LEF ESC        &kp BSPC         &kp TAB            &kp ENTER         &kp SPACE        &lt RIG DEL
 				//             			    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯
 				>;
 		};
@@ -116,7 +116,7 @@
 				//│       |        │       %        │       `        │       ~        │       *        │   │       +        │       ^        │       $        │       &        │       ?        │
 				       &kp PIPE         &kp PRCNT        &kp GRAVE        &kp TILDE        &kp ASTRK            &kp PLUS         &kp CARET        &kp DLLR         &kp AMPS         &kp QMARK
 				//╰────────────────┴────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴────────────────╯
-								       &lt LEF ESC        &kp SPACE         &kp TAB            &kp ENTER         &kp BSPC        &lt RIG DEL
+								       &lt LEF ESC        &kp BSPC         &kp TAB            &kp ENTER         &kp SPACE        &lt RIG DEL
 				//             			    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯
 				>;
 		};
@@ -133,7 +133,7 @@
 				//│       F9       │      F10       │      F11       │      F12       │    CLEAR BT    │   │    PROFILE 4   │   DEC BRIGHT   │                |    VOL DOWN    │    PREVSONG    │
 				      &kp F9          &kp F10          &kp F11          &kp F12           &bt BT_CLR          &bt BT_SEL 4     &kp C_BRI_DEC       &none        &kp C_VOL_DN       &kp C_PREV
 				//╰────────────────┴────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴────────────────╯
-								       &lt LEF ESC        &kp SPACE         &kp TAB            &kp ENTER         &kp BSPC        &lt RIG DEL
+								       &lt LEF ESC        &kp BSPC         &kp TAB            &kp ENTER         &kp SPACE        &lt RIG DEL
 				//             			    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯
 				>;
 		};

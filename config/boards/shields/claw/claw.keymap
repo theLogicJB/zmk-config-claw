@@ -55,7 +55,7 @@
 		};
 	};
 	behaviors {
-		td_mt_a: tap_dance_mod_tap {
+		td_mt_a: tap_dance_mod_tap_a {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_MOD_TAP_A";
 			#binding-cells = <0>;
@@ -63,7 +63,7 @@
 			bindings = <&mt LGUI A>, <&ma_a>;
 		};
 
-		td_mt_s: tap_dance_mod_tap {
+		td_mt_s: tap_dance_mod_tap_s {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_MOD_TAP_S";
 			#binding-cells = <0>;

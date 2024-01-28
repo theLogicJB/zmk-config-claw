@@ -6,12 +6,60 @@
 // Home row mods macro
 #define HRMR(k1, k2, k3, k4) &mt RSHIFT k1  &mt RCTRL k2  &mt RALT k3 &mt RGUI k4
 
-#define MAC 0
+#define LNX 0
 #define RIG 1
 #define LEF 2
 #define TRI 3
 
 / {
+        macros {
+                ma_c: ma_c {
+                        #label = "MACRO_C";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_press &kp LCTRL>
+                            , <&macro_tap &kp C>
+                            , <&macro_release &kp LCTRL>
+                            ;
+                };
+                ma_v: ma_v {
+                        #label = "MACRO_V";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&macro_press &kp LCTRL>
+                            , <&macro_tap &kp V>
+                            , <&macro_release &kp LCTRL>
+                            ;
+                };
+	};
+
+	behaviors {
+		ht: hold_tap_balanced {
+			    compatible = "zmk,behavior-hold-tap";
+			    #label = "HOLD_TAP_BAL";
+			    #binding-cells = <2>;
+			    flavor = "tap-preferred";
+			    tapping-term-ms = <200>;
+			    quick-tap-ms = <100>;
+			    #require-prior-idle-ms = <50>;
+			    bindings = <&kp>, <&kp>;
+			};
+		td_c: tap_dance_c {
+			    compatible = "zmk,behavior-tap-dance";
+			    #binding-cells = <0>;
+			    tapping-term-ms = <200>;
+			    bindings = <&kp C>, <&kp C>, <&ma_c>;
+			};
+		td_v: tap_dance_v {
+			    compatible = "zmk,behavior-tap-dance";
+			    #binding-cells = <0>;
+			    tapping-term-ms = <200>;
+			    bindings = <&kp V>, <&kp V>, <&ma_v>;
+			};
+	};
+
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		tri_layer {
@@ -29,7 +77,7 @@
 				       &kp Q            &kp W            &kp E            &kp R            &kp T                &kp Y              &kp U            &kp I            &kp O            &kp P
 				//├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
 				//│        A       │        S       │        D       │        F       │        G       │   │        H       │        J       │        K       │        L       │        ;       │
-				      &mt LGUI A       &mt LALT S      &mt LCTRL D      &mt LSHIFT F       &kp G                &kp H          &mt RSHIFT J     &mt RCTRL K       &mt RALT L     &mt RGUI SEMI
+				      &ht LGUI A       &ht LALT S      &ht LCTRL D      &ht LSHIFT F       &kp G                &kp H          &ht RSHIFT J     &ht RCTRL K       &ht RALT L     &ht RGUI SEMI
 				//├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
 				//│        Z       │        X       │        C       │        V       │        B       │   │        N       │        M       │       , <      │       . >      │       /        │
 				       &kp Z            &kp X            &kp C            &kp V            &kp B                &kp N            &kp M            &kp COMMA         &kp DOT         &kp FSLH

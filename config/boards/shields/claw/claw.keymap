@@ -57,7 +57,7 @@
 			    #binding-cells = <0>;
 			    tapping-term-ms = <200>;
 			    bindings = <&kp V>, <&kp V>, <&ma_v>;
-			};
+			
 	};
 
 	conditional_layers {
@@ -82,7 +82,7 @@
 				//│        Z       │        X       │        C       │        V       │        B       │   │        N       │        M       │       , <      │       . >      │       /        │
 				       &kp Z            &kp X            &td_c             &td_v             &kp B                &kp N            &kp M            &kp COMMA         &kp DOT         &kp FSLH
 				//╰────────────────┴────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴────────────────╯
-								       &lt LEF ESC        &kp SPACE         &kp TAB            &kp ENTER         &kp BSPC        &lt RIG DEL
+								       &lt LEF ESC        &kp BSPC         &kp TAB            &kp ENTER         &kp SPACE        &lt RIG DEL
 				//             			    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯
 				>;
 		};

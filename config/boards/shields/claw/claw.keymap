@@ -12,80 +12,6 @@
 #define TRI 3
 
 / {
-	macros {
-		ma_a: macro_a {
-			label = "MACRO_A";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			    = <&macro_press &kp RALT>
-			    , <&macro_tap &kp Q>
-			    , <&macro_release &kp RALT>
-			    ;
-		};
-		ma_s: macro_s {
-			label = "MACRO_S";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			    = <&macro_press &kp RALT>
-			    , <&macro_tap &kp S>
-			    , <&macro_release &kp RALT>
-			    ;
-		};
-		ma_u: macro_u {
-			label = "MACRO_U";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			    = <&macro_press &kp RALT>
-			    , <&macro_tap &kp Y>
-			    , <&macro_release &kp RALT>
-			    ;
-		};
-		ma_o: macro_o {
-			label = "MACRO_O";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			    = <&macro_press &kp RALT>
-			    , <&macro_tap &kp P>
-			    , <&macro_release &kp RALT>
-			    ;
-		};
-	};
-	behaviors {
-		td_mt_a: tap_dance_mod_tap_a {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_MOD_TAP_A";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&mt LGUI A>, <&ma_a>;
-		};
-
-		td_mt_s: tap_dance_mod_tap_s {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_MOD_TAP_S";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&mt LALT S>, <&ma_s>;
-		};
-		td_u: tap_dance_u {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_U";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp U>, <&ma_u>;
-		};
-		td_o: tap_dance_o {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_O";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp O>, <&ma_o>;
-		};
-	};
-
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
 		tri_layer {
@@ -100,10 +26,10 @@
 			bindings = <
 				//╭────────────────┬────────────────┬────────────────┬────────────────┬────────────────╮   ╭────────────────┬────────────────┬────────────────┬────────────────┬────────────────╮
 				//│        Q       │        W       │        E       │        R       │        T       │   │        Y       │        U       │        I       │        O       │        P       │
-				       &kp Q            &kp W            &kp E            &kp R            &kp T                &kp Y              &td_u          &kp I              &td_o          &kp P
+				       &kp Q            &kp W            &kp E            &kp R            &kp T                &kp Y              &kp U            &kp I            &kp O            &kp P
 				//├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
 				//│        A       │        S       │        D       │        F       │        G       │   │        H       │        J       │        K       │        L       │        ;       │
-				       &td_mt_a         &td_mt_s       &mt LCTRL D      &mt LSHIFT F       &kp G                &kp H          &mt RSHIFT J     &mt RCTRL K       &mt RALT L     &mt RGUI SEMI
+				      &mt LGUI A       &mt LALT S      &mt LCTRL D      &mt LSHIFT F       &kp G                &kp H          &mt RSHIFT J     &mt RCTRL K       &mt RALT L     &mt RGUI SEMI
 				//├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
 				//│        Z       │        X       │        C       │        V       │        B       │   │        N       │        M       │       , <      │       . >      │       /        │
 				       &kp Z            &kp X            &kp C            &kp V            &kp B                &kp N            &kp M            &kp COMMA         &kp DOT         &kp FSLH
